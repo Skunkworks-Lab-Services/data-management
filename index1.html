@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f4f7;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .data-management-chart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .data-management-chart img {
+            width: 100%;
+            height: auto;
+        }
+        .data-management-item {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .item-architecture { top: 10%; left: 15%; }
+        .item-governance { top: 30%; left: 5%; }
+        .item-transformation { top: 50%; left: 10%; }
+        .item-warehousing { top: 70%; left: 15%; }
+        .item-database { top: 10%; right: 15%; }
+        .item-master-data { top: 30%; right: 5%; }
+        .item-quality-control { top: 50%; right: 10%; }
+        .item-integration { top: 70%; right: 15%; }
+        .data-management-item:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Data Management</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" role="button">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="data-management-chart">
+            <img src="your_image_source_here" alt="Data Management Chart">
+            <div class="data-management-item item-architecture">
+                <strong>Architecture</strong>
+            </div>
+            <div class="data-management-item item-governance">
+                <strong>Governance</strong>
+            </div>
+            <div class="data-management-item item-transformation">
+                <strong>Transformation</strong>
+            </div>
+            <div class="data-management-item item-warehousing">
+                <strong>Warehousing</strong>
+            </div>
+            <div class="data-management-item item-database">
+                <strong>Database System</strong>
+            </div>
+            <div class="data-management-item item-master-data">
+                <strong>Master Data & Meta Management</strong>
+            </div>
+            <div class="data-management-item item-quality-control">
+                <strong>Quality Control</strong>
+            </div>
+            <div class="data-management-item item-integration">
+                <strong>Integration Definition</strong>
+            </div>
+        </div>
+    </main>
+    <section aria-label="Subscribe example">
+        <div class="container">
+            <article>
+                <hgroup>
+                    <h2>Subscribe to our newsletter</h2>
+                    <h3>Stay updated with the latest news</h3>
+                </hgroup>
+                <form class="grid">
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name" required />
+                    <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
+                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+                </form>
+            </article>
+        </div>
+    </section>
+    <footer class="container">
+        <small>
+            <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+        </small>
+    </footer>
+</body>
+</html>
