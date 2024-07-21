@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    height: 60%;
+}
+
+.main-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-circle h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.circle-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+.circle p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.circle .tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: left;
+    z-index: 10;
+}
+
+.circle:hover .tooltip {
+    display: block;
+}
+
+.architecture { top: 10%; left: 10%; }
+.governance { top: 10%; right: 10%; }
+.transformation { top: 30%; left: 70%; }
+.warehousing { bottom: 30%; left: 10%; }
+.database { bottom: 10%; left: 30%; }
+.master-data { bottom: 10%; right: 30%; }
+.quality-control { bottom: 30%; right: 10%; }
+.integration { top: 30%; right: 70%; }
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd; /* Placeholder for icon */
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
