@@ -3,60 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Management Insights</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@carbon/styles/css/styles.css">
+    <title>Data Management</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="bx--header">
         <a class="bx--header__name" href="#">
-            Data Management Insights
+            Data Management
         </a>
+        <input type="text" id="search" placeholder="Search..." class="search-box">
     </header>
     <main class="container">
-        <section class="main-circle">
+        <section class="main-circle" id="main-topic">
             <h2>Data Management</h2>
         </section>
+        <svg class="svg-container">
+            <!-- Lines connecting the main topic to each subtopic -->
+            <line x1="50%" y1="50%" x2="15%" y2="20%" class="line architecture-line" />
+            <line x1="50%" y1="50%" x2="85%" y2="20%" class="line governance-line" />
+            <line x1="50%" y1="50%" x2="15%" y2="40%" class="line transformation-line" />
+            <line x1="50%" y1="50%" x2="85%" y2="40%" class="line warehousing-line" />
+            <line x1="50%" y1="50%" x2="15%" y2="60%" class="line database-line" />
+            <line x1="50%" y1="50%" x2="85%" y2="60%" class="line master-data-line" />
+            <line x1="50%" y1="50%" x2="15%" y2="80%" class="line quality-control-line" />
+            <line x1="50%" y1="50%" x2="85%" y2="80%" class="line integration-line" />
+        </svg>
         <section class="circle-container bx--grid">
-            <div class="bx--row">
-                <div class="bx--col-md-4 bx--col-lg-3 circle architecture" data-title="Architecture" data-description="Learn about the structural design of data management systems." data-details="Architecture in data management refers to the structural design of data systems, which includes databases, data warehouses, and data lakes. It ensures data is stored, processed, and accessed efficiently. ISO Standards: ISO/IEC 25010, ISO/IEC 27001. Industry Use Cases: Financial institutions, Healthcare systems. Best Practices: Modular and scalable designs, interoperability. Implementation Strategy: Centralized data repository, scalable cloud solutions.">
-                    <div class="icon"></div>
-                    <p>Architecture</p>
+            <div class="circle architecture" data-title="Architecture" data-description="Learn about the structural design of data management systems.">
+                <div class="icon architecture-icon"></div>
+                <p>Architecture</p>
+                <div class="tooltip">
+                    <h3>Architecture</h3>
+                    <p>Learn about the structural design of data management systems.</p>
                 </div>
-                <div class="bx--col-md-4 bx--col-lg-3 circle governance" data-title="Governance" data-description="Understand the policies and procedures for managing data assets." data-details="Data governance involves the policies, procedures, and standards that ensure the effective and efficient use of data. It ensures data quality, security, and compliance with regulations. ISO Standards: ISO/IEC 38500, ISO/IEC 27001. Industry Use Cases: Retail companies, Government agencies. Best Practices: Data governance committee, data stewardship roles. Implementation Strategy: Data governance framework, training.">
-                    <div class="icon"></div>
-                    <p>Governance</p>
+            </div>
+            <div class="circle governance" data-title="Governance" data-description="Understand the policies and procedures for managing data assets.">
+                <div class="icon governance-icon"></div>
+                <p>Governance</p>
+                <div class="tooltip">
+                    <h3>Governance</h3>
+                    <p>Understand the policies and procedures for managing data assets.</p>
                 </div>
-                <div class="bx--col-md-4 bx--col-lg-3 circle transformation" data-title="Transformation" data-description="Discover methods for converting data into valuable insights." data-details="Data transformation involves converting data from one format or structure to another, making it suitable for analysis and reporting. It is crucial for data integration and preparation. ISO Standards: ISO/IEC 20944. Industry Use Cases: E-commerce platforms, Telecommunications companies. Best Practices: ETL tools, maintain data integrity. Implementation Strategy: ETL tools, standardized procedures.">
-                    <div class="icon"></div>
-                    <p>Transformation</p>
+            </div>
+            <div class="circle transformation" data-title="Transformation" data-description="Discover methods for converting data into valuable insights.">
+                <div class="icon transformation-icon"></div>
+                <p>Transformation</p>
+                <div class="tooltip">
+                    <h3>Transformation</h3>
+                    <p>Discover methods for converting data into valuable insights.</p>
                 </div>
-                <div class="bx--col-md-4 bx--col-lg-3 circle warehousing" data-title="Warehousing" data-description="Explore techniques for efficient data storage and retrieval." data-details="Data warehousing involves collecting and managing data from different sources to provide meaningful business insights. It is designed for query and analysis rather than transaction processing. ISO Standards: ISO/IEC 11179. Industry Use Cases: Manufacturing companies, Insurance firms. Best Practices: Dimensional modeling, data warehouse appliances. Implementation Strategy: University data warehouse, institutional research support.">
-                    <div class="icon"></div>
-                    <p>Warehousing</p>
+            </div>
+            <div class="circle warehousing" data-title="Warehousing" data-description="Explore techniques for efficient data storage and retrieval.">
+                <div class="icon warehousing-icon"></div>
+                <p>Warehousing</p>
+                <div class="tooltip">
+                    <h3>Warehousing</h3>
+                    <p>Explore techniques for efficient data storage and retrieval.</p>
                 </div>
-                <div class="bx--col-md-4 bx--col-lg-3 circle database" data-title="Database System" data-description="Dive into the systems for managing and querying databases." data-details="A database system is a software system designed to manage databases. It supports the creation, maintenance, and use of databases for storing and retrieving data. ISO Standards: ISO/IEC 9075, ISO/IEC 13249. Industry Use Cases: Banking sectors, Online retailers. Best Practices: RDBMS for structured data, NoSQL for unstructured data. Implementation Strategy: Hybrid database approach, scalable and secure systems.">
-                    <div class="icon"></div>
-                    <p>Database System</p>
+            </div>
+            <div class="circle database" data-title="Database System" data-description="Dive into the systems for managing and querying databases.">
+                <div class="icon database-icon"></div>
+                <p>Database System</p>
+                <div class="tooltip">
+                    <h3>Database System</h3>
+                    <p>Dive into the systems for managing and querying databases.</p>
                 </div>
-                <div class="bx--col-md-4 bx--col-lg-3 circle master-data" data-title="Master Data & Meta Management" data-description="Understand the management of critical data and metadata." data-details="Master Data Management (MDM) involves managing the critical data of an organization to ensure consistency and accuracy. Metadata management deals with the creation and management of data about data. ISO Standards: ISO/IEC 11179, ISO 8000. Industry Use Cases: Automotive companies, Pharmaceutical firms. Best Practices: Single source of truth, metadata management tools. Implementation Strategy: MDM strategy, metadata management.">
-                    <div class="icon"></div>
-                    <p>Master Data & Meta Management</p>
+            </div>
+            <div class="circle master-data" data-title="Master Data & Meta Management" data-description="Understand the management of critical data and metadata.">
+                <div class="icon master-data-icon"></div>
+                <p>Master Data & Meta Management</p>
+                <div class="tooltip">
+                    <h3>Master Data & Meta Management</h3>
+                    <p>Understand the management of critical data and metadata.</p>
                 </div>
-                <div class="bx--col-md-4 bx--col-lg-3 circle quality-control" data-title="Quality Control" data-description="Learn about ensuring data accuracy and consistency." data-details="Data quality control involves processes and technologies to ensure that data meets specific standards of quality, including accuracy, completeness, reliability, and relevance. ISO Standards: ISO 8000, ISO/IEC 25012. Industry Use Cases: Healthcare providers, Energy companies. Best Practices: Data profiling and cleansing tools, data quality metrics. Implementation Strategy: Data quality audits, data cleansing processes.">
-                    <div class="icon"></div>
-                    <p>Quality Control</p>
+            </div>
+            <div class="circle quality-control" data-title="Quality Control" data-description="Learn about ensuring data accuracy and consistency.">
+                <div class="icon quality-control-icon"></div>
+                <p>Quality Control</p>
+                <div class="tooltip">
+                    <h3>Quality Control</h3>
+                    <p>Learn about ensuring data accuracy and consistency.</p>
                 </div>
-                <div class="bx--col-md-4 bx--col-lg-3 circle integration" data-title="Integration Definition" data-description="Explore the methods for integrating various data systems." data-details="Integration definition involves designing and implementing methods to ensure that different systems and applications can work together seamlessly, exchanging data and information efficiently. ISO Standards: ISO/IEC 19510, ISO/IEC 29110. Industry Use Cases: Logistics companies, Financial institutions. Best Practices: APIs for system integration, middleware solutions. Implementation Strategy: Integration strategy, APIs for data sharing.">
-                    <div class="icon"></div>
-                    <p>Integration Definition</p>
+            </div>
+            <div class="circle integration" data-title="Integration Definition" data-description="Explore the methods for integrating various data systems.">
+                <div class="icon integration-icon"></div>
+                <p>Integration Definition</p>
+                <div class="tooltip">
+                    <h3>Integration Definition</h3>
+                    <p>Explore the methods for integrating various data systems.</p>
                 </div>
             </div>
         </section>
     </main>
     <footer class="bx--footer">
-        <p>&copy; 2024 Data Management Insights. All rights reserved.</p>
+        <p>&copy; 2024 Data Management. All rights reserved.</p>
     </footer>
+    <div class="chat-support">
+        <button class="chat-button">Chat Support</button>
+    </div>
     <script src="dist/main.js"></script>
 </body>
 </html>
