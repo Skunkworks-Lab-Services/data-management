@@ -1,13 +1,16 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "es6", // Modern JS features
         "module": "commonjs",
         "outDir": "./dist",
         "rootDir": "./src",
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["es6", "dom"], // Include library for modern JavaScript and DOM
+        "sourceMap": true, // Useful for debugging
+        "allowJs": true // If your project includes JS files
     },
     "include": ["src"]
 }
