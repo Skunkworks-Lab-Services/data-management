@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/npm/@carbon/styles/css/styles.css');
+
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     margin: 0;
@@ -13,6 +15,24 @@ header.bx--header {
     color: white;
     padding: 1rem;
     text-align: center;
+    position: relative;
+}
+
+header.bx--header .bx--header__name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.search-box {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -22,10 +42,11 @@ header.bx--header {
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    position: relative;
 }
 
 .main-circle {
-    background: #fff;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
     border: 5px solid #d1d9e6;
     border-radius: 50%;
     width: 250px;
@@ -33,46 +54,57 @@ header.bx--header {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 20px #d1d9e6, -10px -10px 20px #ffffff;
     margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
     animation: fadeIn 2s ease-in-out;
+    z-index: 1;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .main-circle h2 {
     font-size: 1.5rem;
     color: #333;
     text-align: center;
+    animation: pulse 2s infinite;
 }
 
 .circle-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
 }
 
 .circle {
-    background: #fff;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
     border: 2px solid #d1d9e6;
-    border-radius: 1rem;
+    border-radius: 50%;
     width: 150px;
-    height: 100px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 1rem;
-    transition: transform 0.3s;
+    box-shadow: 10px 10px 20px #d1d9e6, -10px -10px 20px #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     cursor: pointer;
+    animation: fadeInUp 1
+    animation: fadeInUp 1s ease-in-out both;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .circle:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translateZ(10px);
+    box-shadow: 10px 10px 20px #bbbbbb, -10px -10px 20px #ffffff;
 }
 
 .icon {
@@ -80,16 +112,17 @@ header.bx--header {
     height: 40px;
     margin-bottom: 10px;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.architecture { background-image: url('path/to/architecture-icon.png'); }
-.governance { background-image: url('path/to/governance-icon.png'); }
-.transformation { background-image: url('path/to/transformation-icon.png'); }
-.warehousing { background-image: url('path/to/warehousing-icon.png'); }
-.database { background-image: url('path/to/database-icon.png'); }
-.master-data { background-image: url('path/to/master-data-icon.png'); }
-.quality-control { background-image.quality-control { background-image: url('path/to/quality-control-icon.png'); }
-.integration { background-image: url('path/to/integration-icon.png'); }
+.architecture-icon { background-image: url('https://raw.githubusercontent.com/skunkworksza/web/117d8f94da3abef7df1294ed8adcf8ff7c3c3e8b/assets/icons/data--privacy.svg'); }
+.governance-icon { background-image: url('https://raw.githubusercontent.com/skunkworksza/web/117d8f94da3abef7df1294ed8adcf8ff7c3c3e8b/assets/icons/analyzes--data.svg'); }
+.transformation-icon { background-image: url('https://raw.githubusercontent.com/skunkworksza/web/117d8f94da3abef7df1294ed8adcf8ff7c3c3e8b/assets/downloaded/inspect--data.svg'); }
+.warehousing-icon { background-image: url('https://raw.githubusercontent.com/skunkworksza/web/117d8f94da3abef7df1294ed8adcf8ff7c3c3e8b/assets/icons/data--base.svg'); }
+.database-icon { background-image: url('https://raw.githubusercontent.com/skunkworksza/web/117d8f94da3abef7df1294ed8adcf8ff7c3c3e8b/assets/icons/rule--data-quality.svg'); }
+.master-data-icon { background-image: url('https://raw.githubusercontent.com/skunkworksza/web/117d8f94da3abef7df1294ed8adcf8ff7c3c3e8b/assets/icons/cloud-pak--for-data.svg'); }
+.quality-control-icon { background-image: url('https://raw.githubusercontent.com/skunkworksza/web/117d8f94da3abef7df1294ed8adcf8ff7c3c3e8b/assets/icons/data-enrichment.svg'); }
+.integration-icon { background-image: url('https://raw.githubusercontent.com/skunkworksza/web/117d8f94da3abef7df1294ed8adcf8ff7c3c3e8b/assets/icons/data--processing.svg'); }
 
 .circle p {
     font-size: 1rem;
@@ -101,20 +134,23 @@ header.bx--header {
 .tooltip {
     display: none;
     position: absolute;
-    bottom: 120%;
+    top: -80px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 10px;
     border-radius: 5px;
-    width: 250px;
+    width: 300px;
     text-align: center;
     z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .circle:hover .tooltip {
     display: block;
+    opacity: 1;
 }
 
 footer.bx--footer {
@@ -132,7 +168,7 @@ footer.bx--footer {
 
     .circle {
         width: 120px;
-        height: 80px;
+        height: 120px;
     }
 
     .circle p {
@@ -149,4 +185,118 @@ footer.bx--footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.svg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.line {
+    stroke: #d1d9e6;
+    stroke-width: 2;
+    transition: stroke 0.3s;
+}
+
+.circle:hover + .line,
+.line:hover {
+    stroke: #0f62fe;
+}
+
+.chat-support {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.chat-button {
+    background-color: #0f62fe;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-button:hover {
+    background-color: #0043ce;
+}
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid #d1d9e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.chat-popup-header {
+    background-color: #0f62fe;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.chat-popup-body {
+    padding: 10px;
+}
+
+.chat-popup-body textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d9e6;
+    border-radius: 5px;
+    resize: none;
+    height: 100px;
+}
+
+.chat-popup-footer {
+    padding: 10px;
+    text-align: right;
+}
+
+.chat-popup-footer button {
+    background-color: #0f62fe;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-popup-footer button:hover {
+    background-color: #0043ce;
 }
