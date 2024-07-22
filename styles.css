@@ -37,6 +37,7 @@ header.bx--header {
     margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .main-circle h2 {
@@ -67,6 +68,7 @@ header.bx--header {
     margin: 1rem;
     transition: transform 0.3s;
     position: relative;
+    cursor: pointer;
 }
 
 .circle:hover {
@@ -86,7 +88,7 @@ header.bx--header {
 .warehousing { background-image: url('path/to/warehousing-icon.png'); }
 .database { background-image: url('path/to/database-icon.png'); }
 .master-data { background-image: url('path/to/master-data-icon.png'); }
-.quality-control { background-image: url('path/to/quality-control-icon.png'); }
+.quality-control { background-image.quality-control { background-image: url('path/to/quality-control-icon.png'); }
 .integration { background-image: url('path/to/integration-icon.png'); }
 
 .circle p {
@@ -106,7 +108,7 @@ header.bx--header {
     color: #fff;
     padding: 10px;
     border-radius: 5px;
-    width: 200px;
+    width: 250px;
     text-align: center;
     z-index: 10;
 }
@@ -135,5 +137,16 @@ footer.bx--footer {
 
     .circle p {
         font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
