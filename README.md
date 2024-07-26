@@ -11,7 +11,8 @@ Welcome to the **Data Management** repository by Skunkworks Lab Services! This p
 
 The goal of this website is to offer comprehensive insights into data management practices, covering topics such as data transformation, analysis, privacy, protection, warehousing, cleansing, governance, architecture, quality control, and master data management.
 
-![Data Management](https://github.com/user-attachments/assets/d84f8c3c-65e6-416f-bfaf-5150ee120290)
+![Data Management](https://github.com/user-attachments/assets/9580cd82-6e6e-4b81-b9c8-46a4b03a931c)
+
 
 ## 🌟 Features
 
