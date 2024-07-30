@@ -1,119 +1,154 @@
-# Data Management 🚀
+# NMU Data Management App
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/Skunkworks-Lab-Services/data-management.svg)](https://github.com/Skunkworks-Lab-Services/data-management/issues)
-[![GitHub stars](https://img.shields.io/github/stars/Skunkworks-Lab-Services/data-management.svg)](https://github.com/Skunkworks-Lab-Services/data-management/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Skunkworks-Lab-Services/data-management.svg)](https://github.com/Skunkworks-Lab-Services/data-management/network)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-yellow)
+![React](https://img.shields.io/badge/react-18.3.1-blue)
 
-Welcome to the **Data Management** repository by Skunkworks Lab Services! This project serves as an educational resource for data management, aiming to educate, engage, guide, and provide valuable resources to data professionals.
+Welcome to the NMU Data Management App! This application is designed to streamline data management processes at Nelson Mandela University, ensuring data quality, security, and governance across all information systems.
 
-## 📚 About
+## Table of Contents
 
-The goal of this website is to offer comprehensive insights into data management practices, covering topics such as data transformation, analysis, privacy, protection, warehousing, cleansing, governance, architecture, quality control, and master data management.
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Components](#components)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
-![Data Management](https://github.com/user-attachments/assets/9580cd82-6e6e-4b81-b9c8-46a4b03a931c)
+## Features
 
+- **Dashboard**: Overview of data management metrics and statistics.
+- **Data Catalog**: List and details of data sources.
+- **Data Quality**: Tools and reports for assessing and improving data quality.
+- **Data Governance**: Policies and procedures related to data governance.
+- **Data Security**: Security measures and access control management.
+- **Data Integration**: Manage data integration points and workflows.
+- **Analytics**: Access and run data analytics tools.
 
-## 🌟 Features
-
-- **Educational Content**: Detailed guides and tutorials.
-- **Interactive Examples**: Hands-on examples to illustrate concepts.
-- **Resource Library**: A collection of valuable resources and links.
-
-## 🚀 Getting Started
-
-To get started with this project, follow these steps:
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (v14 or later)
-- npm (v6 or later)
+- Node.js (>= 14.x)
+- npm (>= 6.x)
 
 ### Installation
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/Skunkworks-Lab-Services/data-management.git
-   cd data-management
-   ```
-
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
-
-3. Start the development server:
-   ```sh
-   npm start
-   ```
-
-## 🗂️ Project Structure
-
-```plaintext
-data-management/
-├── dist/
-│   └── main.js
-├── src/
-│   └── main.ts
-├── LICENSE
-├── README.md
-├── architecture.html
-├── index.html
-├── index1.html
-├── package.json
-├── script.js
-├── styles.css
-└── tsconfig.json
+1. Clone the repository
+```sh
+   git clone https://github.com/yourusername/data-management-app.git
+   cd data-management-app
 ```
 
-## 📜 Documentation
+2. Install dependencies
+```sh
+   npm install
+```
 
-- [Data Transformation](docs/data-transformation.md)
-- [Data Analysis](docs/data-analysis.md)
-- [Data Privacy](docs/data-privacy.md)
-- [Data Protection](docs/data-protection.md)
+3. Start the development server
+```sh
+   npm start
+```
 
-## 📈 Analytics
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Our repository is integrated with [Google Analytics](https://analytics.google.com/) to track usage and improve the resource based on user feedback.
+## Components
 
-## 🤝 Contributing
+### App Structure
+``` bash
+src/
+│
+├── components/
+│   ├── Dashboard.tsx
+│   ├── DataCatalog.tsx
+│   ├── DataQuality.tsx
+│   ├── DataGovernance.tsx
+│   ├── DataSecurity.tsx
+│   ├── DataIntegration.tsx
+│   ├── Analytics.tsx
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   └── Sidebar.tsx
+│
+├── App.tsx
+├── index.tsx
+├── index.css
+└── App.css
+```
 
-We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) for more details.
+### Component Descriptions
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a pull request
+- **Dashboard**: Displays an overview of key metrics and statistics.
+- **DataCatalog**: Manages the inventory of data sources.
+- **DataQuality**: Tools and reports for data quality assessment.
+- **DataGovernance**: Defines data governance policies and procedures.
+- **DataSecurity**: Manages security measures and access control.
+- **DataIntegration**: Handles data integration points and workflows.
+- **Analytics**: Provides tools for data analysis and reporting.
 
-## 🛡️ License
+## Screenshots
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Dashboard
 
-## 🌐 Deployment
+![Dashboard](https://via.placeholder.com/800x400)
 
-This project is continuously deployed to GitHub Pages. Visit the live site at: [skunkworks-lab-services.github.io/data-management](https://skunkworks-lab-services.github.io/data-management/)
+### Data Catalog
 
-## 🎉 Acknowledgments
+![Data Catalog](https://via.placeholder.com/800x400)
 
-Thanks to all the contributors and the open-source community for their support and contributions.
+### Data Quality
 
-![Animation](https://github.com/skunkworksza/Media/blob/main/avatar.png?raw=true)
+![Data Quality](https://via.placeholder.com/800x400)
+
+### Data Governance
+
+![Data Governance](https://via.placeholder.com/800x400)
+
+### Data Security
+
+![Data Security](https://via.placeholder.com/800x400)
+
+### Data Integration
+
+![Data Integration](https://via.placeholder.com/800x400)
+
+### Analytics
+
+![Analytics](https://via.placeholder.com/800x400)
+
+## Contributing
+
+We welcome contributions to the NMU Data Management App! Please follow these steps:
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+For any inquiries, please contact the project maintainer:
+
+- **Raydo Matthee**
+  - [LinkedIn](https://www.linkedin.com/in/raydo-matthee/)
+  - [Email](mailto:raydo@skunkworks.africa)
 
 ---
 
-<p align="center">
-  <img src="https://github.com/skunkworksza/Media/blob/main/avatar.png?raw=true" alt="Footer Logo" width="100"/>
-</p>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<p align="center">
-  Made with ❤️ by Skunkworks Lab Services
-</p>
 ```
 
-### Additional Notes:
+### Notes:
+- Replace the `https://via.placeholder.com/800x400` links with actual screenshots of your application.
+- Update the `git clone https://github.com/yourusername/data-management-app.git` link with the actual URL of your repository.
+- Add the actual path to your logo image in the `Navbar` component if it's different.
+- Customize the contact section with your preferred contact details.
 
-- Ensure the URL for the animation or any additional images you want to include are accurate and accessible.
-- The animation and image URLs have been updated to use the provided avatar image.
-- Customize further if necessary to fit your repository's needs and style preferences.
+This `README.md` file provides a detailed and visually appealing overview of your Data Management App, helping users understand its purpose, features, and structure.
