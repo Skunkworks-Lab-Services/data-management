@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMU Hybrid Cloud Integration Strategy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #007b5e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #007b5e;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img.vendor-logo {
+            max-width: 100px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007b5e;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007b5e;
+            color: white;
+            border-radius: 5px;
+        }
+        .mermaid {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+
+<header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Nelson_Mandela_University_logo.svg/1200px-Nelson_Mandela_University_logo.svg.png" alt="NMU Logo">
+    <h1>NMU Hybrid Cloud Integration Strategy</h1>
+</header>
+
+<section>
+    <h2>2. Tool Selection and Pilot Testing</h2>
+
+    <h3>2.1 Specifications for Tool Selection</h3>
+    <p>To select the most appropriate integration tool, NMU must consider a range of technical and strategic factors. The following specifications outline the key criteria:</p>
+    
+    <h3>2.1.1 Compatibility with Existing Infrastructure</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/1024px-Microsoft_Azure_Logo.svg.png" alt="Microsoft Azure Logo" class="vendor-logo">
+    <p>The integration tool must be fully compatible with NMU’s current on-premises systems and cloud platforms.</p>
+    <ul>
+        <li><strong>System Integration</strong>: Support for existing technologies such as VMware, Microsoft Azure, and Red Hat.</li>
+        <li><strong>Data Format Support</strong>: Ability to handle the data formats currently used within NMU (e.g., JSON, XML, CSV).</li>
+        <li><strong>API Integration</strong>: Compatibility with APIs used by NMU’s applications.</li>
+    </ul>
+    
+    <h3>2.1.2 Scalability and Performance</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/VMware_Logo.svg/1280px-VMware_Logo.svg.png" alt="VMware Logo" class="vendor-logo">
+    <p>The tool must support NMU's growth, handling increasing data volumes and more complex integration scenarios.</p>
+    <ul>
+        <li><strong>Horizontal and Vertical Scaling</strong>: Ability to scale out by adding more instances and scale up by increasing resources to a single instance.</li>
+        <li><strong>Load Handling</strong>: Capacity to manage large data transfers and high transaction volumes.</li>
+        <li><strong>Performance Metrics</strong>: Low latency, high throughput, and efficient resource utilization.</li>
+    </ul>
+
+    <h3>2.1.3 Security and Compliance</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/IBM_Logo.svg/1200px-IBM_Logo.svg.png" alt="IBM Logo" class="vendor-logo">
+    <p>The tool must meet NMU’s stringent security and regulatory requirements, ensuring data integrity and confidentiality.</p>
+    <ul>
+        <li><strong>Encryption</strong>: Support for data encryption at rest and in transit.</li>
+        <li><strong>Access Control</strong>: Robust identity and access management features, including role-based access control (RBAC).</li>
+        <li><strong>Compliance</strong>: Adherence to relevant regulatory standards (e.g., POPIA, GDPR).</li>
+    </ul>
+
+    <h3>2.1.4 Ease of Use and Management</h3>
+    <p>The tool should be user-friendly, allowing NMU’s IT staff to manage it efficiently without extensive training.</p>
+    <ul>
+        <li><strong>User Interface</strong>: Intuitive and accessible user interface for administrators and users.</li>
+        <li><strong>Automation Capabilities</strong>: Support for automation in deployment, monitoring, and management tasks.</li>
+        <li><strong>Vendor Support</strong>: Availability of comprehensive documentation, customer support, and training resources.</li>
+    </ul>
+
+    <h3>2.1.5 Cost-Effectiveness</h3>
+    <p>The tool should provide good value for money, balancing functionality with cost.</p>
+    <ul>
+        <li><strong>Total Cost of Ownership (TCO)</strong>: Consideration of licensing fees, maintenance costs, and any additional infrastructure investments.</li>
+        <li><strong>Flexible Pricing Models</strong>: Availability of pay-as-you-go, subscription, or perpetual licensing models.</li>
+    </ul>
+
+    <h3>2.2 Strategic Planning for Tool Selection</h3>
+    
+    <!-- Comparison Table -->
+    <h3>Tool Comparison Table</h3>
+    <table>
+        <tr>
+            <th>Criteria</th>
+            <th>Microsoft Azure Arc</th>
+            <th>VMware vRealize Suite</th>
+            <th>IBM Cloud Pak</th>
+        </tr>
+        <tr>
+            <td>Compatibility</td>
+            <td>High</td>
+            <td>Medium</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Scalability</td>
+            <td>High</td>
+            <td>High</td>
+            <td>Medium</td>
+        </tr>
+        <tr>
+            <td>Security</td>
+            <td>High</td>
+            <td>High</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Ease of Use</td>
+            <td>Medium</td>
+            <td>High</td>
+            <td>Medium</td>
+        </tr>
+        <tr>
+            <td>Cost</td>
+            <td>Medium</td>
+            <td>High</td>
+            <td>Medium</td>
+        </tr>
+    </table>
+
+    <h3>2.3 Pilot Testing</h3>
+
+    <!-- Pros and Cons Table -->
+    <h3>Pros and Cons of Pilot Testing</h3>
+    <table>
+        <tr>
+            <th>Pros</th>
+            <th>Cons</th>
+        </tr>
+        <tr>
+            <td>Identifies potential issues early</td>
+            <td>Requires time and resources</td>
+        </tr>
+        <tr>
+            <td>Validates tool performance</td>
+            <td>May delay full-scale deployment</td>
+        </tr>
+        <tr>
+            <td>Engages key stakeholders</td>
+            <td>Limited scope may not reveal all issues</td>
+        </tr>
+    </table>
+
+    <h3>Mermaid Diagram of the Pilot Testing Process</h3>
+    <div class="mermaid">
+    graph TD;
+        A[Select Tool] --> B[Set Up Test Environment];
+        B --> C[Performance Testing];
+        C --> D[Security Testing];
+        D --> E[Gather Feedback];
+        E --> F[Final Tool Selection];
+    </div>
+    
+</section>
+
+<section>
+    <h2>3. Full-Scale Deployment</h2>
+
+    <h3>3.1 Strategic Planning for Deployment</h3>
+
+    <h3>3.1.1 Deployment Roadmap</h3>
+    <p>Develop a detailed roadmap for the full-scale deployment of the selected tool across NMU’s hybrid cloud environment.</p>
+
+    <!-- Roadmap Table -->
+    <h3>Deployment Roadmap</h3>
+    <table>
+        <tr>
+            <th>Phase</th>
+            <th>Activities</th>
+            <th>Timeline</th>
+        </tr>
+        <tr>
+            <td>Phase 1</td>
+            <td>Deploy in non-critical systems</td>
+            <td>2 weeks</td>
+        </tr>
+        <tr>
+            <td>Phase 2</td>
+            <td>Expand to critical systems</td>
+            <td>4 weeks</td>
+        </tr>
+        <tr>
+            <td>Phase 3</td>
+            <td>Full-scale rollout and monitoring</td>
+            <td>6 weeks</td>
+        </tr>
+    </table>
+
+    <h3>3.1.2 Resource Allocation</h3>
+    <p>Allocate necessary resources, including personnel, budget, and infrastructure, for the deployment.</p>
+
+    <h3>3.1.3 Change Management and Communication</h3>
+    <p>Implement a change management plan to ensure smooth adoption of the new tool across NMU.</p>
+
+    <!-- Change Management Metrics -->
+    <h3>Change Management Metrics</h3>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Target</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>User Adoption Rate</td>
+            <td>90% by end of Q2</td>
+            <td>On Track</td>
+        </tr>
+        <tr>
+            <td>Training Completion</td>
+            <td>100% by rollout</td>
+            <td>80% completed</td>
+        </tr>
+        <tr>
+            <td>Issue Resolution Time</td>
+            <td>Less than 24 hours</td>
+            <td>Average 18 hours</td>
+        </tr>
+    </table>
+
+    <h3>3.2 Deployment Process</h3>
+
+    <h3>3.2.1 Initial Rollout</h3>
+    <p>Begin with the deployment of the tool in non-critical systems to minimize risk.</p>
+
+    <h3>3.2.2 Incremental Expansion</h3>
+    <p>Gradually expand the deployment to include more critical systems based on the initial rollout’s success.</p>
+
+    <h3>3.2.3 Security and Compliance Measures</h3>
+    <p>Ensure that robust security measures are in place throughout the deployment.</p>
+
+    <h3>3.3 Post-Deployment Optimization</h3>
+
+    <h3>3.3.1 Performance Monitoring</h3>
+    <p>Continuously monitor the performance of the tool across the hybrid cloud environment.</p>
+
+    <h3>3.3.2 User Training and Support</h3>
+    <p>Provide ongoing training and support to ensure that all users can effectively use the new tool.</p>
+
+    <h3>3.3.3 Continuous Improvement</h3>
+    <p>Implement a continuous improvement process to refine and enhance the tool’s integration over time.</p>
+
+    <!-- Mermaid Diagram for Continuous Improvement Process -->
+    <h3>Mermaid Diagram of Continuous Improvement Process</h3>
+    <div class="mermaid">
+    graph LR;
+        A[Monitor Performance] --> B[Collect Feedback];
+        B --> C[Analyze Data];
+        C --> D[Implement Improvements];
+        D --> A;
+    </div>
+    
+</section>
+
+<footer>
+    <p>&copy; 2024 Nelson Mandela University - Hybrid Cloud Integration Strategy</p>
+</footer>
+
+</body>
+</html>
