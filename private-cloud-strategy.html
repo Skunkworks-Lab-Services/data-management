@@ -52,7 +52,8 @@
 
         h1,
         h2,
-        h3 {
+        h3,
+        h4 {
             color: #007b5e;
             padding: 10px;
             background-color: #f0f8ff;
@@ -63,7 +64,8 @@
             margin: 10px 0;
         }
 
-        ul {
+        ul,
+        ol {
             margin: 10px 0;
             padding-left: 20px;
         }
@@ -120,6 +122,56 @@
             margin: 20px 0;
             border-radius: 5px;
         }
+
+        /* Responsive Enhancements */
+        @media (max-width: 768px) {
+            header {
+                height: 200px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+                padding: 10px;
+            }
+
+            table,
+            th,
+            td {
+                font-size: 0.9rem;
+            }
+
+            img.vendor-logo {
+                max-width: 70px;
+            }
+
+            section {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+                padding: 5px;
+            }
+
+            img.vendor-logo {
+                max-width: 50px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .mermaid {
+                font-size: 0.8rem;
+            }
+        }
     </style>
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
@@ -132,7 +184,7 @@
 <body>
 
     <header>
-        <img src="https://webapps.mandela.ac.za/design/Resources/images/logos/FullColourLogo.PNG" alt="NMU Logo">
+        <img src="https://webapps.mandela.ac.za/design/Resources/images/logos/FullColourLogo.PNG" alt="NMU Logo" aria-label="Nelson Mandela University Logo">
         <h1>NMU Hybrid Cloud Management and Integration Tools Proposal</h1>
     </header>
 
@@ -166,7 +218,7 @@
 
         <h3>1. Microsoft Azure Arc</h3>
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo"
-            class="vendor-logo">
+            class="vendor-logo" aria-label="Microsoft Azure Logo">
         <p><strong>Description</strong>: Azure Arc enables NMU to extend Azure services and management to any
             infrastructure, whether on-premises, in other clouds, or at the edge. This tool provides a single pane of
             glass for managing resources across environments.</p>
@@ -185,13 +237,13 @@
 
         <h3>2. VMware vRealize Suite</h3>
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/VMware_vRealize_Automation_Logo.png"
-            alt="VMware vRealize Automation Logo" class="vendor-logo">
+            alt="VMware vRealize Automation Logo" class="vendor-logo" aria-label="VMware vRealize Automation Logo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/VMware_vRealize_Operations_Logo.png"
-            alt="VMware vRealize Operations Logo" class="vendor-logo">
+            alt="VMware vRealize Operations Logo" class="vendor-logo" aria-label="VMware vRealize Operations Logo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/VMware_vRealize_Log_Insight_logo.png"
-            alt="VMware vRealize Log Insight logo" class="vendor-logo">
+            alt="VMware vRealize Log Insight logo" class="vendor-logo" aria-label="VMware vRealize Log Insight logo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/VMware_vRealize_Life_Cycle_Manager_logo.png"
-            alt="VMware vRealize Life Cycle Manager logo" class="vendor-logo">
+            alt="VMware vRealize Life Cycle Manager logo" class="vendor-logo" aria-label="VMware vRealize Life Cycle Manager logo">
         <p><strong>Description</strong>: VMware vRealize Suite is a cloud management platform that offers infrastructure
             automation, operations management, and business insight across hybrid cloud environments.</p>
         <ul>
@@ -208,8 +260,7 @@
 
         <h3>3. IBM Cloud Pak for Integration</h3>
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/IBM_Cloud_logo.png" alt="IBM Logo"
-            class="vendor-logo">
-        <p><strong>Description</strong>: IBM Cloud Pak for Integration offers a set of AI-powered
+            class="vendor-logo" aria-label="IBM Logo">
         <p><strong>Description</strong>: IBM Cloud Pak for Integration offers a set of AI-powered integration capabilities that enable NMU to connect apps, data, and services across hybrid environments.</p>
         <ul>
             <li><strong>API Management</strong>: Simplify the creation, security, and management of APIs across environments.</li>
@@ -220,7 +271,8 @@
         <p><strong>Use Case</strong>: Ideal for NMU if the university requires advanced integration capabilities and needs to manage complex data flows across different environments.</p>
 
         <h3>4. Red Hat OpenShift</h3>
-        <img src="https://www.redhat.com/cms/managed-files/Brand_Standars-Red_Hat-_color_on-white.svg" alt="Red Hat Logo" class="vendor-logo">
+        <img src="https://www.redhat.com/cms/managed-files/Brand_Standars-Red_Hat-_color_on-white.svg" alt="Red Hat Logo"
+            class="vendor-logo" aria-label="Red Hat Logo">
         <p><strong>Description</strong>: OpenShift is a Kubernetes-based container platform that enables hybrid cloud environments, providing a consistent development and operations experience across on-premises and cloud environments.</p>
         <ul>
             <li><strong>Container Orchestration</strong>: Manage containerized applications across hybrid environments.</li>
@@ -231,7 +283,7 @@
         <p><strong>Use Case</strong>: Best for NMU if the university is moving towards containerization and microservices, requiring consistent development and operations practices.</p>
 
         <h3>5. MuleSoft Anypoint Platform</h3>
-        <img src="https://upload.wikimedia.org/wikipedia/en/e/e2/MuleSoft_logo.svg" alt="MuleSoft Logo" class="vendor-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/e2/MuleSoft_logo.svg" alt="MuleSoft Logo" class="vendor-logo" aria-label="MuleSoft Logo">
         <p><strong>Description</strong>: MuleSoft Anypoint Platform is an integration platform that enables NMU to connect applications, data, and devices with APIs.</p>
         <ul>
             <li><strong>API-Led Connectivity</strong>: Build and manage APIs to integrate data and applications across hybrid environments.</li>
@@ -365,7 +417,7 @@
         <p><strong>Detailed Documentation</strong>: Maintain comprehensive documentation of all configurations, policies, and procedures related to the hybrid cloud. Detailed documentation ensures continuity and aids in troubleshooting, training, and audits.</p>
 
         <div class="mermaid">
-        graph LR;
+            graph LR;
             A[Monitor Performance] --> B[Collect Feedback];
             B --> C[Analyze Data];
             C --> D[Implement Improvements];
@@ -383,4 +435,5 @@
     </footer>
 
 </body>
+
 </html>
